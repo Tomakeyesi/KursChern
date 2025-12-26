@@ -1,106 +1,102 @@
 \begin{theindex}
 
   \item {authenticate}
-    \subitem {Server}, \hyperpage{8}
+    \subitem {Server}, \hyperpage{6}
 
   \indexspace
 
   \item {calculateSumOfSquares}
-    \subitem {Server}, \hyperpage{9}
+    \subitem {Server}, \hyperpage{7}
   \item {createTempUserDb}
-    \subitem {test.cpp}, \hyperpage{19}
+    \subitem {test.cpp}, \hyperpage{17}
 
   \indexspace
 
   \item {deleteTempFile}
-    \subitem {test.cpp}, \hyperpage{19}
-
-  \indexspace
-
-  \item {final\_test\_report.md}, \hyperpage{15}
+    \subitem {test.cpp}, \hyperpage{17}
 
   \indexspace
 
   \item {generateSalt}
-    \subitem {Server}, \hyperpage{10}
+    \subitem {Server}, \hyperpage{8}
 
   \indexspace
 
   \item {handleClient}
-    \subitem {Server}, \hyperpage{10}
+    \subitem {Server}, \hyperpage{8}
 
   \indexspace
 
   \item {loadUserDatabase}
-    \subitem {Server}, \hyperpage{10}
+    \subitem {Server}, \hyperpage{8}
   \item {logError}
-    \subitem {Server}, \hyperpage{11}
+    \subitem {Server}, \hyperpage{9}
   \item {logPath}
-    \subitem {Server}, \hyperpage{13}
+    \subitem {Server}, \hyperpage{11}
 
   \indexspace
 
   \item {main}
-    \subitem {main.cpp}, \hyperpage{16}
-    \subitem {test.cpp}, \hyperpage{19}
-  \item {main.cpp}, \hyperpage{15}
-    \subitem {main}, \hyperpage{16}
-    \subitem {showHelp}, \hyperpage{16}
+    \subitem {main.cpp}, \hyperpage{14}
+    \subitem {test.cpp}, \hyperpage{17}
+  \item {main.cpp}, \hyperpage{13}
+    \subitem {main}, \hyperpage{14}
+    \subitem {showHelp}, \hyperpage{14}
 
   \indexspace
 
   \item {port}
-    \subitem {Server}, \hyperpage{13}
-  \item {processVectors}
     \subitem {Server}, \hyperpage{11}
+  \item {processVectors}
+    \subitem {Server}, \hyperpage{9}
 
   \indexspace
 
   \item {readExact}
-    \subitem {Server}, \hyperpage{12}
+    \subitem {Server}, \hyperpage{10}
 
   \indexspace
 
-  \item {Server}, \hyperpage{7}
-    \subitem {authenticate}, \hyperpage{8}
-    \subitem {calculateSumOfSquares}, \hyperpage{9}
-    \subitem {generateSalt}, \hyperpage{10}
-    \subitem {handleClient}, \hyperpage{10}
-    \subitem {loadUserDatabase}, \hyperpage{10}
-    \subitem {logError}, \hyperpage{11}
-    \subitem {logPath}, \hyperpage{13}
-    \subitem {port}, \hyperpage{13}
-    \subitem {processVectors}, \hyperpage{11}
-    \subitem {readExact}, \hyperpage{12}
-    \subitem {Server}, \hyperpage{8}
-    \subitem {sha224Hash}, \hyperpage{12}
-    \subitem {start}, \hyperpage{13}
-    \subitem {userDbPath}, \hyperpage{13}
-    \subitem {users}, \hyperpage{14}
-  \item {server.cpp}, \hyperpage{17}
-  \item {server.h}, \hyperpage{17}
+  \item {Server}, \hyperpage{5}
+    \subitem {authenticate}, \hyperpage{6}
+    \subitem {calculateSumOfSquares}, \hyperpage{7}
+    \subitem {generateSalt}, \hyperpage{8}
+    \subitem {handleClient}, \hyperpage{8}
+    \subitem {loadUserDatabase}, \hyperpage{8}
+    \subitem {logError}, \hyperpage{9}
+    \subitem {logPath}, \hyperpage{11}
+    \subitem {port}, \hyperpage{11}
+    \subitem {processVectors}, \hyperpage{9}
+    \subitem {readExact}, \hyperpage{10}
+    \subitem {Server}, \hyperpage{6}
+    \subitem {sha224Hash}, \hyperpage{10}
+    \subitem {start}, \hyperpage{11}
+    \subitem {userDbPath}, \hyperpage{11}
+    \subitem {users}, \hyperpage{12}
+  \item {server.cpp}, \hyperpage{15}
+  \item {server.h}, \hyperpage{15}
   \item {sha224Hash}
-    \subitem {Server}, \hyperpage{12}
+    \subitem {Server}, \hyperpage{10}
   \item {showHelp}
-    \subitem {main.cpp}, \hyperpage{16}
+    \subitem {main.cpp}, \hyperpage{14}
   \item {start}
-    \subitem {Server}, \hyperpage{13}
+    \subitem {Server}, \hyperpage{11}
   \item {SUITE}
-    \subitem {test.cpp}, \hyperpage{20}
+    \subitem {test.cpp}, \hyperpage{18}
 
   \indexspace
 
-  \item {test.cpp}, \hyperpage{19}
-    \subitem {createTempUserDb}, \hyperpage{19}
-    \subitem {deleteTempFile}, \hyperpage{19}
-    \subitem {main}, \hyperpage{19}
-    \subitem {SUITE}, \hyperpage{20}
+  \item {test.cpp}, \hyperpage{17}
+    \subitem {createTempUserDb}, \hyperpage{17}
+    \subitem {deleteTempFile}, \hyperpage{17}
+    \subitem {main}, \hyperpage{17}
+    \subitem {SUITE}, \hyperpage{18}
 
   \indexspace
 
   \item {userDbPath}
-    \subitem {Server}, \hyperpage{13}
+    \subitem {Server}, \hyperpage{11}
   \item {users}
-    \subitem {Server}, \hyperpage{14}
+    \subitem {Server}, \hyperpage{12}
 
 \end{theindex}

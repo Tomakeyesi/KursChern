@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['final_5ftest_5freport_2emd_4',['final_test_report.md',['../final__test__report_8md.html',1,'']]]
+  ['generatesalt_4',['generateSalt',['../classServer.html#a25261b86b953dad01f34d51603977a48',1,'Server']]]
 ];

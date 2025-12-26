@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['loaduserdatabase_7',['loadUserDatabase',['../classServer.html#a9290fe65be8acb1f8cb9af21b31fd3a4',1,'Server']]],
-  ['logerror_8',['logError',['../classServer.html#a1af8f5ae4fe58b7521f8f2052bd5cb82',1,'Server']]],
-  ['logpath_9',['logPath',['../classServer.html#a892af6bb196921411f60d35ddf1947e3',1,'Server']]]
+  ['main_9',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp'],['../test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;test.cpp']]],
+  ['main_2ecpp_10',['main.cpp',['../main_8cpp.html',1,'']]]
 ];
