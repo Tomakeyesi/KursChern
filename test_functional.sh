@@ -63,11 +63,11 @@ run_test() {
     TOTAL_TESTS=$((TOTAL_TESTS + 1))
     
     if $test_func; then
-        echo "✅ ТЕСТ $test_num ПРОЙДЕН"
+        echo "OK ТЕСТ $test_num ПРОЙДЕН"
         PASSED_TESTS=$((PASSED_TESTS + 1))
         return 0
     else
-        echo "❌ ТЕСТ $test_num ПРОВАЛЕН"
+        echo "ERR ТЕСТ $test_num ПРОВАЛЕН"
         FAILED_TESTS=$((FAILED_TESTS + 1))
         return 1
     fi
@@ -264,7 +264,7 @@ test_05_nonexistent_db() {
 main() {
     # Проверяем наличие сервера
     if [ ! -f "$SERVER" ]; then
-        echo "❌ Ошибка: Файл сервера '$SERVER' не найден!"
+        echo "Ошибка: Файл сервера '$SERVER' не найден!"
         exit 1
     fi
     
@@ -373,11 +373,11 @@ main() {
     echo "" >> "$REPORT_FILE"
     
     if [ $PASSED_TESTS -eq $TOTAL_TESTS ] && [ $TOTAL_TESTS -gt 0 ]; then
-        echo "✅ **ВСЕ ТЕСТЫ УСПЕШНО ПРОЙДЕНЫ!**" >> "$REPORT_FILE"
+        echo "**ВСЕ ТЕСТЫ УСПЕШНО ПРОЙДЕНЫ!**" >> "$REPORT_FILE"
         echo "" >> "$REPORT_FILE"
         echo "Сервер соответствует функциональным требованиям и готов к использованию." >> "$REPORT_FILE"
     else
-        echo "⚠ **ТРЕБУЕТСЯ ДОРАБОТКА!**" >> "$REPORT_FILE"
+        echo "**ТРЕБУЕТСЯ ДОРАБОТКА!**" >> "$REPORT_FILE"
         echo "" >> "$REPORT_FILE"
         echo "Обнаружены непройденные тесты. Требуется исправление обнаруженных проблем перед выпуском в эксплуатацию." >> "$REPORT_FILE"
     fi
@@ -406,12 +406,12 @@ main() {
     # Возвращаем код
     if [ $PASSED_TESTS -eq $TOTAL_TESTS ] && [ $TOTAL_TESTS -gt 0 ]; then
         echo ""
-        echo "✅ ВСЕ ТЕСТЫ УСПЕШНО ПРОЙДЕНЫ!"
+        echo "ВСЕ ТЕСТЫ УСПЕШНО ПРОЙДЕНЫ!"
         echo "Сервер соответствует функциональным требованиям."
         exit 0
     else
         echo ""
-        echo "⚠ ТРЕБУЕТСЯ ДОРАБОТКА!"
+        echo "ТРЕБУЕТСЯ ДОРАБОТКА!"
         echo "Есть непройденные тесты."
         exit 1
     fi
