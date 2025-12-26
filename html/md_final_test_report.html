@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Курсовая работа: Программная реализация сетевого сервера. Чернышев Ринат 24ПТ2: Отчет о функциональном тестировании сервера</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Курсовая работа: Программная реализация сетевого сервера. Чернышев Ринат 24ПТ2
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Отчет о функциональном тестировании сервера </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
+Информация о тестировании</h1>
+<ul>
+<li>Дата тестирования: 2025-12-26 16:52:02</li>
+<li>Версия сервера: SHA-224 с суммой квадратов</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Тест-кейсы функционального тестирования</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">ID теста   </th><th class="markdownTableHeadNone">Название   </th><th class="markdownTableHeadNone">Тип   </th><th class="markdownTableHeadNone">Описание   </th><th class="markdownTableHeadNone">Ожидаемый результат   </th><th class="markdownTableHeadNone">Полученный результат   </th><th class="markdownTableHeadNone">Итог    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">Базовый запуск сервера   </td><td class="markdownTableBodyNone">Позитивный   </td><td class="markdownTableBodyNone">Запуск сервера с тестовой БД на порту 33444   </td><td class="markdownTableBodyNone">Сервер запускается и слушает порт   </td><td class="markdownTableBodyNone">Успешно   </td><td class="markdownTableBodyNone">ПРОЙДЕН    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">Создание лог-файла   </td><td class="markdownTableBodyNone">Позитивный   </td><td class="markdownTableBodyNone">Проверка создания и записи в лог-файл   </td><td class="markdownTableBodyNone">Лог-файл создается при старте сервера   </td><td class="markdownTableBodyNone">Успешно   </td><td class="markdownTableBodyNone">ПРОЙДЕН    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">Загрузка пользовательской БД   </td><td class="markdownTableBodyNone">Позитивный   </td><td class="markdownTableBodyNone">Проверка загрузки пользовательской базы данных   </td><td class="markdownTableBodyNone">Сервер запускается и загружает пользователей   </td><td class="markdownTableBodyNone">Успешно   </td><td class="markdownTableBodyNone">ПРОЙДЕН    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">Параметры командной строки   </td><td class="markdownTableBodyNone">Позитивный   </td><td class="markdownTableBodyNone">Проверка обработки параметров командной строки   </td><td class="markdownTableBodyNone">Вывод справки при параметре -h   </td><td class="markdownTableBodyNone">Успешно   </td><td class="markdownTableBodyNone">ПРОЙДЕН    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">Несуществующий файл БД   </td><td class="markdownTableBodyNone">Позитивный   </td><td class="markdownTableBodyNone">Обработка несуществующего файла базы данных   </td><td class="markdownTableBodyNone">Сервер запускается (БД может быть пустой)   </td><td class="markdownTableBodyNone">Успешно   </td><td class="markdownTableBodyNone">ПРОЙДЕН   </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Сводка результатов</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Всего тестов   </th><th class="markdownTableHeadNone">Пройдено   </th><th class="markdownTableHeadNone">Провалено   </th><th class="markdownTableHeadNone">Успешность    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">0   </td><td class="markdownTableBodyNone">100%   </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Заключение</h1>
+<p>✅ <b>ВСЕ ТЕСТЫ УСПЕШНО ПРОЙДЕНЫ!</b></p>
+<p>Сервер соответствует функциональным требованиям и готов к использованию. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

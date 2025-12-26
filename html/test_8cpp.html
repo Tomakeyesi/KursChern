@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Курсовая работа: Программная реализация сетевого сервера. Чернышев Ринат 24ПТ2: Файл test.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Курсовая работа: Программная реализация сетевого сервера. Чернышев Ринат 24ПТ2
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл test.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Модульные тесты для серверного приложения.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;UnitTest++/UnitTest++.h&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;cstdio&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;regex&gt;</code><br />
+<code>#include &quot;<a class="el" href="server_8h_source.html">server.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для test.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="test_8cpp__incl.png" border="0" usemap="#atest_8cpp" alt=""/></div>
+<map name="atest_8cpp" id="atest_8cpp">
+<area shape="rect" title="Модульные тесты для серверного приложения." alt="" coords="553,5,627,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,193,107"/>
+<area shape="rect" title=" " alt="" coords="217,80,291,107"/>
+<area shape="rect" title=" " alt="" coords="315,80,377,107"/>
+<area shape="rect" title=" " alt="" coords="361,155,427,181"/>
+<area shape="rect" title=" " alt="" coords="452,155,515,181"/>
+<area shape="rect" title=" " alt="" coords="601,80,681,107"/>
+<area shape="rect" title=" " alt="" coords="705,80,771,107"/>
+<area shape="rect" title=" " alt="" coords="795,80,854,107"/>
+<area shape="rect" title=" " alt="" coords="878,80,953,107"/>
+<area shape="rect" title=" " alt="" coords="977,80,1051,107"/>
+<area shape="rect" title=" " alt="" coords="1075,80,1134,107"/>
+<area shape="rect" href="server_8h.html" title="Заголовочный файл класса Server." alt="" coords="502,80,577,107"/>
+<area shape="rect" title=" " alt="" coords="539,155,598,181"/>
+<area shape="rect" title=" " alt="" coords="623,155,747,181"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ac24304cc678defb2af0e1ae407132190"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8cpp.html#ac24304cc678defb2af0e1ae407132190">createTempUserDb</a> (const vector&lt; pair&lt; string, string &gt;&gt; &amp;users)</td></tr>
+<tr class="separator:ac24304cc678defb2af0e1ae407132190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a211fb797c17af335a4c37676395a045d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8cpp.html#a211fb797c17af335a4c37676395a045d">deleteTempFile</a> (const string &amp;filename)</td></tr>
+<tr class="separator:a211fb797c17af335a4c37676395a045d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec1925820ef1a0ad1c6d979f80d9e9d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8cpp.html#aec1925820ef1a0ad1c6d979f80d9e9d4">SUITE</a> (CalculationTest)</td></tr>
+<tr class="separator:aec1925820ef1a0ad1c6d979f80d9e9d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac56a35db9d600e2c796632b986697bb3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8cpp.html#ac56a35db9d600e2c796632b986697bb3">SUITE</a> (SHA224HashTest)</td></tr>
+<tr class="separator:ac56a35db9d600e2c796632b986697bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c7c12828e4bb387a4d18632afbcc7fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8cpp.html#a0c7c12828e4bb387a4d18632afbcc7fd">SUITE</a> (SaltGenerationTest)</td></tr>
+<tr class="separator:a0c7c12828e4bb387a4d18632afbcc7fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f7ccf33277e73940dd4691aa76ab78e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8cpp.html#a7f7ccf33277e73940dd4691aa76ab78e">SUITE</a> (UserDatabaseTest)</td></tr>
+<tr class="separator:a7f7ccf33277e73940dd4691aa76ab78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b7621ec95c9a060af320e700ad575e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8cpp.html#a6b7621ec95c9a060af320e700ad575e0">SUITE</a> (SimpleConstructorTest)</td></tr>
+<tr class="separator:a6b7621ec95c9a060af320e700ad575e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4821082e4e457757bd9c82fdb4f2efd3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8cpp.html#a4821082e4e457757bd9c82fdb4f2efd3">SUITE</a> (AuthIntegrationTest)</td></tr>
+<tr class="separator:a4821082e4e457757bd9c82fdb4f2efd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Основная функция модульных тестов.  <a href="test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Модульные тесты для серверного приложения. </p>
+<dl class="section author"><dt>Автор</dt><dd>Чернышев Ринат Рустямович </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>26.12.2025</dd></dl>
+<p>Содержит тесты для проверки корректности работы методов класса <a class="el" href="classServer.html" title="Класс сервера для обработки клиентских подключений.">Server</a>, включая аутентификацию SHA-224, вычисление суммы квадратов и загрузку БД. </p>
+</div><h2 class="groupheader">Функции</h2>
+<a id="ac24304cc678defb2af0e1ae407132190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac24304cc678defb2af0e1ae407132190">&#9670;&nbsp;</a></span>createTempUserDb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string createTempUserDb </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; pair&lt; string, string &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>users</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a211fb797c17af335a4c37676395a045d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a211fb797c17af335a4c37676395a045d">&#9670;&nbsp;</a></span>deleteTempFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void deleteTempFile </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Основная функция модульных тестов. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Код завершения тестов. </dd></dl>
+
+</div>
+</div>
+<a id="a4821082e4e457757bd9c82fdb4f2efd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4821082e4e457757bd9c82fdb4f2efd3">&#9670;&nbsp;</a></span>SUITE() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SUITE </td>
+          <td>(</td>
+          <td class="paramtype">AuthIntegrationTest&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec1925820ef1a0ad1c6d979f80d9e9d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec1925820ef1a0ad1c6d979f80d9e9d4">&#9670;&nbsp;</a></span>SUITE() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SUITE </td>
+          <td>(</td>
+          <td class="paramtype">CalculationTest&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c7c12828e4bb387a4d18632afbcc7fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c7c12828e4bb387a4d18632afbcc7fd">&#9670;&nbsp;</a></span>SUITE() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SUITE </td>
+          <td>(</td>
+          <td class="paramtype">SaltGenerationTest&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac56a35db9d600e2c796632b986697bb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac56a35db9d600e2c796632b986697bb3">&#9670;&nbsp;</a></span>SUITE() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SUITE </td>
+          <td>(</td>
+          <td class="paramtype">SHA224HashTest&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b7621ec95c9a060af320e700ad575e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b7621ec95c9a060af320e700ad575e0">&#9670;&nbsp;</a></span>SUITE() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SUITE </td>
+          <td>(</td>
+          <td class="paramtype">SimpleConstructorTest&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f7ccf33277e73940dd4691aa76ab78e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f7ccf33277e73940dd4691aa76ab78e">&#9670;&nbsp;</a></span>SUITE() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SUITE </td>
+          <td>(</td>
+          <td class="paramtype">UserDatabaseTest&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

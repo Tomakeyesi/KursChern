@@ -1,0 +1,377 @@
+\hypertarget{classServer}{}\doxysection{Класс Server}
+\label{classServer}\index{Server@{Server}}
+
+
+Класс сервера для обработки клиентских подключений.  
+
+
+
+
+{\ttfamily \#include $<$server.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classServer_a2fd5b603aae68583fa469bfd2741c611}{Server}} (int \mbox{\hyperlink{classServer_a926c9dae229a62b6d33fdbb41dca6d82}{port}}, const std\+::string \&\mbox{\hyperlink{classServer_a5b9978a88edc97f5faae0c9c325ec19f}{user\+Db\+Path}}, const std\+::string \&\mbox{\hyperlink{classServer_a892af6bb196921411f60d35ddf1947e3}{log\+Path}})
+\begin{DoxyCompactList}\small\item\em Конструктор сервера. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classServer_acec935535d1d5b58d95cf24678eac014}{start}} ()
+\begin{DoxyCompactList}\small\item\em Запускает сервер и начинает прослушивание порта. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classServer_a1af8f5ae4fe58b7521f8f2052bd5cb82}{log\+Error}} (const std\+::string \&message, bool is\+Critical)
+\begin{DoxyCompactList}\small\item\em Записывает сообщение об ошибке в журнал. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServer_a9290fe65be8acb1f8cb9af21b31fd3a4}{load\+User\+Database}} ()
+\begin{DoxyCompactList}\small\item\em Загружает базу данных пользователей из файла. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classServer_abdab1aabd354de152ee61ffe73fd37f2}{sha224\+Hash}} (const std\+::string \&input)
+\begin{DoxyCompactList}\small\item\em Вычисляет SHA-\/224 хэш строки. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classServer_a25261b86b953dad01f34d51603977a48}{generate\+Salt}} ()
+\begin{DoxyCompactList}\small\item\em Генерирует случайную соль для аутентификации. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServer_a1e0e064acb019cbe4c022857eed95a77}{handle\+Client}} (int client\+Socket)
+\begin{DoxyCompactList}\small\item\em Обрабатывает подключение клиента. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classServer_a3e84895431d164ff6e21cc8f24853ae8}{authenticate}} (int client\+Socket)
+\begin{DoxyCompactList}\small\item\em Аутентифицирует клиента по протоколу SHA-\/224. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServer_acedcde7409c82e846bdb9afc8002dd00}{process\+Vectors}} (int client\+Socket)
+\begin{DoxyCompactList}\small\item\em Обрабатывает передачу векторов от аутентифицированного клиента. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{classServer_a480aebbb813998b0b7a2038fffb1210d}{calculate\+Sum\+Of\+Squares}} (const std\+::vector$<$ int16\+\_\+t $>$ \&vector)
+\begin{DoxyCompactList}\small\item\em Вычисляет сумму квадратов элементов вектора. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classServer_a22f500834c61af612a1aba346343db2a}{read\+Exact}} (int socket, void $\ast$buffer, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Читает точное количество байт из сокета. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classServer_a926c9dae229a62b6d33fdbb41dca6d82}{port}}
+\begin{DoxyCompactList}\small\item\em Порт сервера \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classServer_a5b9978a88edc97f5faae0c9c325ec19f}{user\+Db\+Path}}
+\begin{DoxyCompactList}\small\item\em Путь к базе пользователей \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classServer_a892af6bb196921411f60d35ddf1947e3}{log\+Path}}
+\begin{DoxyCompactList}\small\item\em Путь к файлу журнала \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classServer_a051d6be44ccb07052b0cf5390adc4166}{users}}
+\begin{DoxyCompactList}\small\item\em Кэш пользователей (логин\+:пароль) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс сервера для обработки клиентских подключений. 
+
+Обеспечивает сетевую коммуникацию, аутентификацию пользователей по протоколу SHA-\/224 с генерацией соли на сервере, прием и обработку векторных данных в двоичном формате, а также логирование. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classServer_a2fd5b603aae68583fa469bfd2741c611}\label{classServer_a2fd5b603aae68583fa469bfd2741c611}} 
+\index{Server@{Server}!Server@{Server}}
+\index{Server@{Server}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{Server()}{Server()}}
+{\footnotesize\ttfamily Server\+::\+Server (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{const std\+::string \&}]{user\+Db\+Path,  }\item[{const std\+::string \&}]{log\+Path }\end{DoxyParamCaption})}
+
+
+
+Конструктор сервера. 
+
+Конструктор класса \mbox{\hyperlink{classServer}{Server}}.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em port} & Порт для прослушивания подключений. \\
+\hline
+{\em user\+Db\+Path} & Путь к файлу базы данных пользователей. \\
+\hline
+{\em log\+Path} & Путь к файлу журнала сервера. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classServer_a3e84895431d164ff6e21cc8f24853ae8}\label{classServer_a3e84895431d164ff6e21cc8f24853ae8}} 
+\index{Server@{Server}!authenticate@{authenticate}}
+\index{authenticate@{authenticate}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{authenticate()}{authenticate()}}
+{\footnotesize\ttfamily bool Server\+::authenticate (\begin{DoxyParamCaption}\item[{int}]{client\+Socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Аутентифицирует клиента по протоколу SHA-\/224. 
+
+Аутентифицирует клиента по протоколу SHA-\/224 с солью.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em client\+Socket} & Дескриптор сокета клиента. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если аутентификация успешна.
+\end{DoxyReturn}
+Протокол\+:
+\begin{DoxyEnumerate}
+\item Клиент отправляет логин
+\item Сервер генерирует и отправляет соль (16 hex символов)
+\item Клиент отправляет HASH(SALT $\vert$$\vert$ PASSWORD)
+\item Сервер проверяет хэш
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Аргументы}
+{\em client\+Socket} & Дескриптор сокета клиента. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если аутентификация успешна, false в противном случае. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer_a480aebbb813998b0b7a2038fffb1210d}\label{classServer_a480aebbb813998b0b7a2038fffb1210d}} 
+\index{Server@{Server}!calculateSumOfSquares@{calculateSumOfSquares}}
+\index{calculateSumOfSquares@{calculateSumOfSquares}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{calculateSumOfSquares()}{calculateSumOfSquares()}}
+{\footnotesize\ttfamily int16\+\_\+t Server\+::calculate\+Sum\+Of\+Squares (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int16\+\_\+t $>$ \&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Вычисляет сумму квадратов элементов вектора. 
+
+Вычисляет сумму квадратов элементов вектора с проверкой переполнения.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em vector} & Вектор 16-\/битных целых чисел для обработки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Сумма квадратов элементов.
+\end{DoxyReturn}
+При переполнении вверх возвращает 32767 (2$^\wedge$15), при переполнении вниз возвращает -\/32768 (-\/2$^\wedge$15).
+
+
+\begin{DoxyParams}{Аргументы}
+{\em vector} & Вектор 16-\/битных целых чисел. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Сумма квадратов элементов вектора.
+\end{DoxyReturn}
+При переполнении вверх возвращает 32767 (2$^\wedge$15), при переполнении вниз возвращает -\/32768 (-\/2$^\wedge$15). \mbox{\Hypertarget{classServer_a25261b86b953dad01f34d51603977a48}\label{classServer_a25261b86b953dad01f34d51603977a48}} 
+\index{Server@{Server}!generateSalt@{generateSalt}}
+\index{generateSalt@{generateSalt}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{generateSalt()}{generateSalt()}}
+{\footnotesize\ttfamily std\+::string Server\+::generate\+Salt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Генерирует случайную соль для аутентификации. 
+
+\begin{DoxyReturn}{Возвращает}
+Соль в виде строки из 16 шестнадцатеричных символов (64 бита). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer_a1e0e064acb019cbe4c022857eed95a77}\label{classServer_a1e0e064acb019cbe4c022857eed95a77}} 
+\index{Server@{Server}!handleClient@{handleClient}}
+\index{handleClient@{handleClient}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{handleClient()}{handleClient()}}
+{\footnotesize\ttfamily void Server\+::handle\+Client (\begin{DoxyParamCaption}\item[{int}]{client\+Socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Обрабатывает подключение клиента. 
+
+Обрабатывает подключение одного клиента.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em client\+Socket} & Дескриптор сокета клиента для обмена данными.\\
+\hline
+{\em client\+Socket} & Дескриптор сокета клиента. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServer_a9290fe65be8acb1f8cb9af21b31fd3a4}\label{classServer_a9290fe65be8acb1f8cb9af21b31fd3a4}} 
+\index{Server@{Server}!loadUserDatabase@{loadUserDatabase}}
+\index{loadUserDatabase@{loadUserDatabase}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{loadUserDatabase()}{loadUserDatabase()}}
+{\footnotesize\ttfamily void Server\+::load\+User\+Database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Загружает базу данных пользователей из файла. 
+
+Формат файла\+: каждая строка содержит \char`\"{}логин\+:пароль\char`\"{}.
+
+Читает файл построчно, парсит строки формата \char`\"{}логин\+:пароль\char`\"{} и сохраняет данные во внутреннем контейнере users. \mbox{\Hypertarget{classServer_a1af8f5ae4fe58b7521f8f2052bd5cb82}\label{classServer_a1af8f5ae4fe58b7521f8f2052bd5cb82}} 
+\index{Server@{Server}!logError@{logError}}
+\index{logError@{logError}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{logError()}{logError()}}
+{\footnotesize\ttfamily void Server\+::log\+Error (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{bool}]{is\+Critical }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Записывает сообщение об ошибке в журнал. 
+
+Записывает сообщение об ошибке в файл журнала.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & Текст сообщения об ошибке. \\
+\hline
+{\em is\+Critical} & Флаг критичности ошибки (true для критических).\\
+\hline
+{\em message} & Текст сообщения об ошибке. \\
+\hline
+{\em is\+Critical} & Флаг критичности ошибки. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServer_acedcde7409c82e846bdb9afc8002dd00}\label{classServer_acedcde7409c82e846bdb9afc8002dd00}} 
+\index{Server@{Server}!processVectors@{processVectors}}
+\index{processVectors@{processVectors}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{processVectors()}{processVectors()}}
+{\footnotesize\ttfamily void Server\+::process\+Vectors (\begin{DoxyParamCaption}\item[{int}]{client\+Socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Обрабатывает передачу векторов от аутентифицированного клиента. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em client\+Socket} & Дескриптор сокета клиента для обмена данными.\\
+\hline
+\end{DoxyParams}
+Ожидает данные в двоичном формате\+:
+\begin{DoxyItemize}
+\item количество векторов (uint32\+\_\+t)
+\item для каждого вектора\+:
+\begin{DoxyItemize}
+\item размер (uint32\+\_\+t)
+\item данные (int16\+\_\+t\mbox{[}\mbox{]}) Отправляет результаты в двоичном формате\+:
+\end{DoxyItemize}
+\item количество результатов (uint32\+\_\+t)
+\item результаты (int16\+\_\+t\mbox{[}\mbox{]})
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Аргументы}
+{\em client\+Socket} & Дескриптор сокета клиента.\\
+\hline
+\end{DoxyParams}
+Ожидает данные в двоичном формате согласно ТЗ. \mbox{\Hypertarget{classServer_a22f500834c61af612a1aba346343db2a}\label{classServer_a22f500834c61af612a1aba346343db2a}} 
+\index{Server@{Server}!readExact@{readExact}}
+\index{readExact@{readExact}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{readExact()}{readExact()}}
+{\footnotesize\ttfamily bool Server\+::read\+Exact (\begin{DoxyParamCaption}\item[{int}]{socket,  }\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Читает точное количество байт из сокета. 
+
+Вспомогательная функция для точного чтения из сокета.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em socket} & Дескриптор сокета для чтения. \\
+\hline
+{\em buffer} & Буфер для принятых данных. \\
+\hline
+{\em size} & Количество байт для чтения. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если все байты прочитаны, false при ошибке.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Аргументы}
+{\em socket} & Дескриптор сокета. \\
+\hline
+{\em buffer} & Буфер для данных. \\
+\hline
+{\em size} & Количество байт для чтения. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если все байты прочитаны, false при ошибке. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer_abdab1aabd354de152ee61ffe73fd37f2}\label{classServer_abdab1aabd354de152ee61ffe73fd37f2}} 
+\index{Server@{Server}!sha224Hash@{sha224Hash}}
+\index{sha224Hash@{sha224Hash}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{sha224Hash()}{sha224Hash()}}
+{\footnotesize\ttfamily std\+::string Server\+::sha224\+Hash (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Вычисляет SHA-\/224 хэш строки. 
+
+Вычисляет SHA-\/224 хэш для входной строки.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em input} & Входная строка для хэширования. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+SHA-\/224 хэш в шестнадцатеричном формате (56 символов, верхний регистр).
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Аргументы}
+{\em input} & Входная строка для хэширования. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+SHA-\/224 хэш строки в шестнадцатеричном формате (верхний регистр, 56 символов). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer_acec935535d1d5b58d95cf24678eac014}\label{classServer_acec935535d1d5b58d95cf24678eac014}} 
+\index{Server@{Server}!start@{start}}
+\index{start@{start}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily bool Server\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Запускает сервер и начинает прослушивание порта. 
+
+Запускает основной цикл работы сервера.
+
+\begin{DoxyReturn}{Возвращает}
+true если сервер успешно запущен, false при ошибке.
+
+true если сервер успешно запущен, false при критической ошибке. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classServer_a892af6bb196921411f60d35ddf1947e3}\label{classServer_a892af6bb196921411f60d35ddf1947e3}} 
+\index{Server@{Server}!logPath@{logPath}}
+\index{logPath@{logPath}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{logPath}{logPath}}
+{\footnotesize\ttfamily std\+::string Server\+::log\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Путь к файлу журнала 
+
+\mbox{\Hypertarget{classServer_a926c9dae229a62b6d33fdbb41dca6d82}\label{classServer_a926c9dae229a62b6d33fdbb41dca6d82}} 
+\index{Server@{Server}!port@{port}}
+\index{port@{port}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily int Server\+::port\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Порт сервера 
+
+\mbox{\Hypertarget{classServer_a5b9978a88edc97f5faae0c9c325ec19f}\label{classServer_a5b9978a88edc97f5faae0c9c325ec19f}} 
+\index{Server@{Server}!userDbPath@{userDbPath}}
+\index{userDbPath@{userDbPath}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{userDbPath}{userDbPath}}
+{\footnotesize\ttfamily std\+::string Server\+::user\+Db\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Путь к базе пользователей 
+
+\mbox{\Hypertarget{classServer_a051d6be44ccb07052b0cf5390adc4166}\label{classServer_a051d6be44ccb07052b0cf5390adc4166}} 
+\index{Server@{Server}!users@{users}}
+\index{users@{users}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{users}{users}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::string$>$ Server\+::users\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Кэш пользователей (логин\+:пароль) 
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{server_8h}{server.\+h}}\item 
+\mbox{\hyperlink{server_8cpp}{server.\+cpp}}\end{DoxyCompactItemize}

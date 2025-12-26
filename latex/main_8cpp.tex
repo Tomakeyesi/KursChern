@@ -1,0 +1,74 @@
+\hypertarget{main_8cpp}{}\doxysection{Файл main.\+cpp}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Точка входа серверного приложения.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include \char`\"{}server.\+h\char`\"{}}\newline
+Граф включаемых заголовочных файлов для main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_aec315d77f5c38417289a0e311d2a9d31}{show\+Help}} ()
+\begin{DoxyCompactList}\small\item\em Выводит справочную информацию о параметрах командной строки. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Основная функция серверного приложения. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Точка входа серверного приложения. 
+
+\begin{DoxyAuthor}{Автор}
+Чернышев Ринат Рустямович 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+26.\+12.\+2025
+\end{DoxyDate}
+Основная программа, которая парсит аргументы командной строки, создает и запускает экземпляр сервера для обработки клиентских подключений. 
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Основная функция серверного приложения. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em argc} & Количество аргументов командной строки. \\
+\hline
+{\em argv} & Массив строк-\/аргументов. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Код завершения программы\+:
+\begin{DoxyItemize}
+\item 0\+: успешное завершение или показ справки
+\item 1\+: ошибка запуска сервера 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_aec315d77f5c38417289a0e311d2a9d31}\label{main_8cpp_aec315d77f5c38417289a0e311d2a9d31}} 
+\index{main.cpp@{main.cpp}!showHelp@{showHelp}}
+\index{showHelp@{showHelp}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{showHelp()}{showHelp()}}
+{\footnotesize\ttfamily void show\+Help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Выводит справочную информацию о параметрах командной строки. 
+
+Отображает список доступных опций для запуска сервера и их значения по умолчанию. 

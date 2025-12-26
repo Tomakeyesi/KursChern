@@ -1,0 +1,123 @@
+\hypertarget{test_8cpp}{}\doxysection{Файл test.\+cpp}
+\label{test_8cpp}\index{test.cpp@{test.cpp}}
+
+
+Модульные тесты для серверного приложения.  
+
+
+{\ttfamily \#include $<$Unit\+Test++/\+Unit\+Test++.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+{\ttfamily \#include \char`\"{}server.\+h\char`\"{}}\newline
+Граф включаемых заголовочных файлов для test.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{test_8cpp_ac24304cc678defb2af0e1ae407132190}{create\+Temp\+User\+Db}} (const vector$<$ pair$<$ string, string $>$$>$ \&users)
+\item 
+void \mbox{\hyperlink{test_8cpp_a211fb797c17af335a4c37676395a045d}{delete\+Temp\+File}} (const string \&filename)
+\item 
+\mbox{\hyperlink{test_8cpp_aec1925820ef1a0ad1c6d979f80d9e9d4}{SUITE}} (Calculation\+Test)
+\item 
+\mbox{\hyperlink{test_8cpp_ac56a35db9d600e2c796632b986697bb3}{SUITE}} (SHA224\+Hash\+Test)
+\item 
+\mbox{\hyperlink{test_8cpp_a0c7c12828e4bb387a4d18632afbcc7fd}{SUITE}} (Salt\+Generation\+Test)
+\item 
+\mbox{\hyperlink{test_8cpp_a7f7ccf33277e73940dd4691aa76ab78e}{SUITE}} (User\+Database\+Test)
+\item 
+\mbox{\hyperlink{test_8cpp_a6b7621ec95c9a060af320e700ad575e0}{SUITE}} (Simple\+Constructor\+Test)
+\item 
+\mbox{\hyperlink{test_8cpp_a4821082e4e457757bd9c82fdb4f2efd3}{SUITE}} (Auth\+Integration\+Test)
+\item 
+int \mbox{\hyperlink{test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Основная функция модульных тестов. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Модульные тесты для серверного приложения. 
+
+\begin{DoxyAuthor}{Автор}
+Чернышев Ринат Рустямович 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+26.\+12.\+2025
+\end{DoxyDate}
+Содержит тесты для проверки корректности работы методов класса \mbox{\hyperlink{classServer}{Server}}, включая аутентификацию SHA-\/224, вычисление суммы квадратов и загрузку БД. 
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{test_8cpp_ac24304cc678defb2af0e1ae407132190}\label{test_8cpp_ac24304cc678defb2af0e1ae407132190}} 
+\index{test.cpp@{test.cpp}!createTempUserDb@{createTempUserDb}}
+\index{createTempUserDb@{createTempUserDb}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{createTempUserDb()}{createTempUserDb()}}
+{\footnotesize\ttfamily string create\+Temp\+User\+Db (\begin{DoxyParamCaption}\item[{const vector$<$ pair$<$ string, string $>$$>$ \&}]{users }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{test_8cpp_a211fb797c17af335a4c37676395a045d}\label{test_8cpp_a211fb797c17af335a4c37676395a045d}} 
+\index{test.cpp@{test.cpp}!deleteTempFile@{deleteTempFile}}
+\index{deleteTempFile@{deleteTempFile}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{deleteTempFile()}{deleteTempFile()}}
+{\footnotesize\ttfamily void delete\+Temp\+File (\begin{DoxyParamCaption}\item[{const string \&}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{test.cpp@{test.cpp}!main@{main}}
+\index{main@{main}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Основная функция модульных тестов. 
+
+\begin{DoxyReturn}{Возвращает}
+Код завершения тестов. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8cpp_a4821082e4e457757bd9c82fdb4f2efd3}\label{test_8cpp_a4821082e4e457757bd9c82fdb4f2efd3}} 
+\index{test.cpp@{test.cpp}!SUITE@{SUITE}}
+\index{SUITE@{SUITE}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{SUITE()}{SUITE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily SUITE (\begin{DoxyParamCaption}\item[{Auth\+Integration\+Test}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{test_8cpp_aec1925820ef1a0ad1c6d979f80d9e9d4}\label{test_8cpp_aec1925820ef1a0ad1c6d979f80d9e9d4}} 
+\index{test.cpp@{test.cpp}!SUITE@{SUITE}}
+\index{SUITE@{SUITE}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{SUITE()}{SUITE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily SUITE (\begin{DoxyParamCaption}\item[{Calculation\+Test}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{test_8cpp_a0c7c12828e4bb387a4d18632afbcc7fd}\label{test_8cpp_a0c7c12828e4bb387a4d18632afbcc7fd}} 
+\index{test.cpp@{test.cpp}!SUITE@{SUITE}}
+\index{SUITE@{SUITE}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{SUITE()}{SUITE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily SUITE (\begin{DoxyParamCaption}\item[{Salt\+Generation\+Test}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{test_8cpp_ac56a35db9d600e2c796632b986697bb3}\label{test_8cpp_ac56a35db9d600e2c796632b986697bb3}} 
+\index{test.cpp@{test.cpp}!SUITE@{SUITE}}
+\index{SUITE@{SUITE}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{SUITE()}{SUITE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily SUITE (\begin{DoxyParamCaption}\item[{SHA224\+Hash\+Test}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{test_8cpp_a6b7621ec95c9a060af320e700ad575e0}\label{test_8cpp_a6b7621ec95c9a060af320e700ad575e0}} 
+\index{test.cpp@{test.cpp}!SUITE@{SUITE}}
+\index{SUITE@{SUITE}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{SUITE()}{SUITE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily SUITE (\begin{DoxyParamCaption}\item[{Simple\+Constructor\+Test}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{test_8cpp_a7f7ccf33277e73940dd4691aa76ab78e}\label{test_8cpp_a7f7ccf33277e73940dd4691aa76ab78e}} 
+\index{test.cpp@{test.cpp}!SUITE@{SUITE}}
+\index{SUITE@{SUITE}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{SUITE()}{SUITE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily SUITE (\begin{DoxyParamCaption}\item[{User\+Database\+Test}]{ }\end{DoxyParamCaption})}
+
