@@ -1,12 +1,3 @@
-/**
- * @file test.cpp
- * @author Чернышев Ринат Рустямович
- * @date 26.12.2025
- * @brief Модульные тесты для серверного приложения.
- * @details Содержит тесты для проверки корректности работы методов класса Server,
- *          включая аутентификацию SHA-224, вычисление суммы квадратов и загрузку БД.
- */
-
 #include <UnitTest++/UnitTest++.h>
 #include <fstream>
 #include <cstdio>
@@ -18,12 +9,9 @@
 #include <sstream>
 #include <iomanip>
 #include <regex>
-
 using namespace std;
-
 // #define SERVER_TESTING
 #include "server.h"
-
 // Функция для создания временного файла с пользователями
 string createTempUserDb(const vector<pair<string, string>>& users) {
     string filename = "temp_test_db_" + to_string(time(nullptr)) + ".txt";
@@ -38,14 +26,11 @@ string createTempUserDb(const vector<pair<string, string>>& users) {
     file.close();
     return filename;
 }
-
 // Функция для удаления временного файла
 void deleteTempFile(const string& filename) {
     remove(filename.c_str());
 }
-
 // ==================== ТЕСТЫ ВЫЧИСЛЕНИЙ (СУММА КВАДРАТОВ) ====================
-
 SUITE(CalculationTest)
 {
     TEST(CalculateSumOfSquaresPositiveNumbers) {
@@ -109,9 +94,7 @@ SUITE(CalculationTest)
         CHECK_EQUAL(32767, result);
     }
 }
-
 // ==================== ТЕСТЫ ХЕШИРОВАНИЯ SHA-224 ====================
-
 SUITE(SHA224HashTest)
 {
     TEST(SHA224HashKnownValue1) {
@@ -154,9 +137,7 @@ SUITE(SHA224HashTest)
         CHECK(hash1 != hash2); // Разные входы должны давать разные хэши
     }
 }
-
 // ==================== ТЕСТЫ ГЕНЕРАЦИИ СОЛИ ====================
-
 SUITE(SaltGenerationTest)
 {
     TEST(SaltGenerationLength) {
@@ -190,9 +171,7 @@ SUITE(SaltGenerationTest)
         CHECK(salt1 != salt2);
     }
 }
-
 // ==================== ТЕСТЫ ЗАГРУЗКИ БАЗЫ ПОЛЬЗОВАТЕЛЕЙ ====================
-
 SUITE(UserDatabaseTest)
 {
     TEST(LoadValidUserDatabase) {
@@ -250,9 +229,7 @@ SUITE(UserDatabaseTest)
         deleteTempFile(filename);
     }
 }
-
 // ==================== УПРОЩЕННЫЕ ТЕСТЫ ====================
-
 SUITE(SimpleConstructorTest)
 {
     TEST(ServerConstructorWorks) {
@@ -274,9 +251,7 @@ SUITE(SimpleConstructorTest)
         }
     }
 }
-
 // ==================== ТЕСТЫ ИНТЕГРАЦИИ АУТЕНТИФИКАЦИИ ====================
-
 SUITE(AuthIntegrationTest)
 {
     TEST(AuthHashCalculation) {
@@ -303,13 +278,7 @@ SUITE(AuthIntegrationTest)
         CHECK(validHex);
     }
 }
-
 // ==================== ГЛАВНАЯ ФУНКЦИЯ ТЕСТОВ ====================
-
-/**
- * @brief Основная функция модульных тестов.
- * @return Код завершения тестов.
- */
 int main()
 {
     cout << "Starting server tests..." << endl;

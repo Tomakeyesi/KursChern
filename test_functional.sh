@@ -1,12 +1,10 @@
 #!/bin/bash
-
 echo "╔══════════════════════════════════════════════════════════╗"
 echo "║   ИТОГОВОЕ ФУНКЦИОНАЛЬНОЕ ТЕСТИРОВАНИЕ СЕРВЕРА          ║"
 echo "╚══════════════════════════════════════════════════════════╝"
 echo ""
 echo "Дата: $(date '+%Y-%m-%d %H:%M:%S')"
 echo ""
-
 # Глобальные переменные
 SERVER="./server"
 REPORT_FILE="final_test_report.md"
@@ -15,7 +13,6 @@ TEST_LOG="/tmp/scale_test.log"
 TOTAL_TESTS=0
 PASSED_TESTS=0
 FAILED_TESTS=0
-
 # Утилита для проверки порта
 check_port_listening() {
     local port=$1
@@ -30,14 +27,12 @@ check_port_listening() {
     done
     return 1
 }
-
 # Очистка процессов на порту
 cleanup_port() {
     local port=$1
     lsof -ti :$port 2>/dev/null | xargs kill -9 2>/dev/null || true
     sleep 0.5
 }
-
 # Создаем тестовую конфигурацию
 create_test_config() {
     cat > "$TEST_CONFIG" << 'EOF'
@@ -49,7 +44,6 @@ admin:admin123
 EOF
     echo "Создан тестовый конфиг: $TEST_CONFIG"
 }
-
 # Функция тестирования
 run_test() {
     local test_num=$1
@@ -72,7 +66,6 @@ run_test() {
         return 1
     fi
 }
-
 # Тест 1: Базовый запуск
 test_01_basic_start() {
     echo "Проверка: Запуск сервера с параметрами по умолчанию"
@@ -130,7 +123,6 @@ test_01_basic_start() {
         return 1
     fi
 }
-
 # Тест 2: Логгирование
 test_02_logging() {
     echo "Проверка: Создание и запись в лог-файл"
@@ -171,7 +163,6 @@ test_02_logging() {
         return 1
     fi
 }
-
 # Тест 3: Загрузка пользовательской БД
 test_03_user_db() {
     echo "Проверка: Загрузка базы пользователей"
@@ -217,7 +208,6 @@ EOF
         return 1
     fi
 }
-
 # Тест 4: Проверка параметров командной строки
 test_04_command_line() {
     echo "Проверка: Обработка параметров командной строки"
@@ -233,7 +223,6 @@ test_04_command_line() {
         return 1
     fi
 }
-
 # Тест 5: Несуществующий файл БД
 test_05_nonexistent_db() {
     echo "Проверка: Обработка несуществующего файла БД"
@@ -259,7 +248,6 @@ test_05_nonexistent_db() {
         return 1
     fi
 }
-
 # Главная функция
 main() {
     # Проверяем наличие сервера
@@ -416,6 +404,5 @@ main() {
         exit 1
     fi
 }
-
 # Запуск
 main

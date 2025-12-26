@@ -8,12 +8,12 @@
   \item {calculateSumOfSquares}
     \subitem {Server}, \hyperpage{9}
   \item {createTempUserDb}
-    \subitem {test.cpp}, \hyperpage{20}
+    \subitem {test.cpp}, \hyperpage{19}
 
   \indexspace
 
   \item {deleteTempFile}
-    \subitem {test.cpp}, \hyperpage{20}
+    \subitem {test.cpp}, \hyperpage{19}
 
   \indexspace
 
@@ -42,7 +42,7 @@
 
   \item {main}
     \subitem {main.cpp}, \hyperpage{16}
-    \subitem {test.cpp}, \hyperpage{20}
+    \subitem {test.cpp}, \hyperpage{19}
   \item {main.cpp}, \hyperpage{15}
     \subitem {main}, \hyperpage{16}
     \subitem {showHelp}, \hyperpage{16}
@@ -86,15 +86,15 @@
   \item {start}
     \subitem {Server}, \hyperpage{13}
   \item {SUITE}
-    \subitem {test.cpp}, \hyperpage{20, 21}
+    \subitem {test.cpp}, \hyperpage{20}
 
   \indexspace
 
   \item {test.cpp}, \hyperpage{19}
-    \subitem {createTempUserDb}, \hyperpage{20}
-    \subitem {deleteTempFile}, \hyperpage{20}
-    \subitem {main}, \hyperpage{20}
-    \subitem {SUITE}, \hyperpage{20, 21}
+    \subitem {createTempUserDb}, \hyperpage{19}
+    \subitem {deleteTempFile}, \hyperpage{19}
+    \subitem {main}, \hyperpage{19}
+    \subitem {SUITE}, \hyperpage{20}
 
   \indexspace
 
