@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['port_11',['port',['../classServer.html#a926c9dae229a62b6d33fdbb41dca6d82',1,'Server']]],
-  ['processvectors_12',['processVectors',['../classServer.html#acedcde7409c82e846bdb9afc8002dd00',1,'Server']]]
+  ['readexact_11',['readExact',['../classServer.html#a22f500834c61af612a1aba346343db2a',1,'Server']]]
 ];

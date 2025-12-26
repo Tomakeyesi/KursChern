@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['processvectors_38',['processVectors',['../classServer.html#acedcde7409c82e846bdb9afc8002dd00',1,'Server']]]
+  ['readexact_32',['readExact',['../classServer.html#a22f500834c61af612a1aba346343db2a',1,'Server']]]
 ];
